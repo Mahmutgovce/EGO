@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ego Cafe</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('aa03a1f2-f7ca-404a-810f-ed86540bd0a8.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 10em;
+        }
+
+        .menu-item a {
+            color: black; 
+            text-decoration: none; 
+            font-weight: normal; 
+            font-size: 16px; 
+            cursor: pointer; 
+            transition: color 0.3s ease; 
+        }
+
+        
+        .menu-link {
+            color: rgb(0, 0, 0); 
+            text-decoration: none; 
+            font-weight: normal; 
+            font-size: 16px; 
+            cursor: pointer; 
+        }
+
+        .menu-link:hover {
+            color: rgb(0, 0, 0); 
+            text-decoration: none; 
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            position: relative;
+            margin: auto;
+            padding: 0;
+            width: 50%;
+            max-width: 500px;
+        }
+
+        .close {
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            position: absolute;
+            right: 25px;
+            top: 0;
+        }
+
+        .modal-body img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ego</h1>
+            <nav>
+                <ul>
+                    <li><a href="#coffees" class="menu-link">Kahveler</a></li>
+                    <li><a href="#hot-beverages" class="menu-link">Sıcak İçecekler</a></li>
+                    <li><a href="#cold-beverages" class="menu-link">Soğuk İçecekler</a></li>
+                    <li><a href="#desserts" class="menu-link">Tatlılar</a></li>
+                    <li><a href="#special-beverages" class="menu-link">Konsept İçecekler</a></li>
+                    <li><a href="#contact" class="menu-link">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="coffees" class="menu-section">
+        <h2>Kahve Çeşitleri</h2>
+        <div class="menu-item">
+            <p>Espresso</p>
+            <p>Americano</p>
+            <p>Latte</p>
+            <p>Cappuccino</p>
+            <p>Flat White</p>
+            <p>Macchiato</p>
+            <p>Mocha</p>
+            <p>Sade Filtre Kahve</p>
+            <p>Cold Brew</p>
+            <p>Türk Kahvesi</p>
+            <p>Affogato</p>
+        </div>
+    </section>
+
+    <section id="hot-beverages" class="menu-section">
+        <h2>Sıcak İçecekler</h2>
+        <div class="menu-item">
+            <p>Siyah Çay</p>
+            <p>Yeşil Çay</p>
+            <p>Beyaz Çay</p>
+            <p>Bitki Çayları</p>
+            <p>Sıcak Çikolata</p>
+            <p>Salep</p>
+        </div>
+    </section>
+
+    <section id="cold-beverages" class="menu-section">
+        <h2>Soğuk İçecekler</h2>
+        <div class="menu-item">
+            <p>Ice Latte</p>
+            <p>Ice Americano</p>
+            <p>Ice Mocha</p>
+            <p>Frappe</p>
+            <p>Meyveli Smoothie</p>
+            <p>Yeşil Smoothie</p>
+            <p>Çikolatalı Milkshake</p>
+            <p>Vanilyalı Milkshake</p>
+            <p>Çilekli Milkshake</p>
+            <p>Taze Meyve Suları</p>
+            <p>Limonata (sade, zencefilli, naneli)</p>
+        </div>
+    </section>
+
+    <section id="desserts" class="menu-section">
+        <h2>Tatlılar</h2>
+
+        <h3>Klasik Tatlılar</h3>
+        <div class="menu-item">
+            <p>Cheesecake (çilekli, limonlu, oreolu, karamelli vb.)</p>
+            <p>Brownie</p>
+            <p>Tiramisu</p>
+            <p>Profiterol</p>
+            <p>Mozaik Pasta</p>
+            <p>Trileçe (klasik, karamelli, meyveli)</p>
+            <p>Çikolata Fondü (meyve eşliğinde)</p>
+            <p>Pancake veya Waffle (meyve, çikolata, fındık kremasıyla)</p>
+            <p>Chia Puding (meyveli, çikolatalı)</p>
+            <p>Glütensiz Tatlılar</p>
+            <p>Vegan Brownie veya Kek</p>
+        </div>
+
+        <h3>Kek ve Pasta Çeşitleri</h3>
+        <div class="menu-item">
+            <p>Havuçlu Cevizli Kek</p>
+            <p>Muzlu veya Çikolatalı Muffin</p>
+            <p>Red Velvet Pasta</p>
+            <p>Cupcake Çeşitleri</p>
+            <p>Meyveli Tart (çilek, yaban mersini, elma)</p>
+        </div>
+
+        <h3>Kurabiye ve Atıştırmalıklar</h3>
+        <div class="menu-item">
+            <p>Çikolata Parçalı Kurabiye</p>
+            <p>Unsuz Fındıklı Kurabiye</p>
+            <p>Makaron (çeşitli aromalarda)</p>
+            <p>Kruvasan (çikolatalı, sade, bademli)</p>
+        </div>
+
+        <h3>Türk ve Geleneksel Tatlılar</h3>
+        <div class="menu-item">
+            <p>Baklava (fıstıklı, cevizli)</p>
+            <p>Sütlaç</p>
+            <p>Revani</p>
+            <p>Kazandibi</p>
+            <p>Soğuk baklava</p>
+            <p>Fıstıklı kadayıf</p>
+            <p>Künefe</p>
+        </div>
+
+        <h3>Dondurma ve Soğuk Tatlılar</h3>
+        <div class="menu-item">
+            <p>Parfe</p>
+            <p>Dondurma (kup veya tabakta, farklı aromalarla)</p>
+            <p>Karamelli veya Çikolatalı Sundae</p>
+        </div>
+
+        <h3>Özel Tatlılar</h3>
+        <div class="menu-item">
+            <p><a href="#" class="dessert-link" data-image="WhatsApp Image 2024-12-23 at 21.34.45.jpeg">Altın hatıra</a></p>
+            <p><a href="#" class="dessert-link" data-image="WhatsApp Image 2024-12-22 at 17.47.40 (2).jpeg ">Egonu kır</a></p>
+        </div>
+    </section>
+
+    <section id="special-beverages" class="menu-section">
+        <h2>Konsept İçecekler</h2>
+        <div class="menu-item">
+            <p><a href="#" class="drink-link" data-image="koç.jpeg">Koç</a></p>
+            <p><a href="#" class="drink-link" data-image="boğa.jpeg">Boğa</a></p>
+            <p><a href="#" class="drink-link" data-image="ikizler.jpeg">İkizler</a></p>
+            <p><a href="#" class="drink-link" data-image="yengeç.jpeg">Yengeç</a></p>
+            <p><a href="#" class="drink-link" data-image="WhatsApp Image 2024-12-23 at 21.21.31.jpeg">Aslan</a></p>
+            <p><a href="#" class="drink-link" data-image="başak.jpeg">Başak</a></p>
+            <p><a href="#" class="drink-link" data-image="terazi.jpeg">Terazi</a></p>
+            <p><a href="#" class="drink-link" data-image="akrep.jpeg">Akrep</a></p>
+            <p><a href="#" class="drink-link" data-image="yay.jpeg">Yay</a></p>
+            <p><a href="#" class="drink-link" data-image="oğlak.jpeg">Oğlak</a></p>
+            <p><a href="#" class="drink-link" data-image="kova.jpeg">Kova</a></p>
+            <p><a href="#" class="drink-link" data-image="balık.jpeg">Balık</a></p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>İletişim</h2>
+        <p>Telefon: 555-123-4567</p>
+        <p>Email: info@egocafe.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ego Cafe by Engincan Yeleğen - Tüm hakları saklıdır.</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="İçecek Resmi">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        document.querySelectorAll('.drink-link').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                var imageSrc = this.getAttribute('data-image');
+                document.getElementById('modal-image').src = imageSrc;
+                document.getElementById('modal').style.display = 'block';
+            });
+        });
+
+        
+        document.querySelectorAll('.dessert-link').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                var imageSrc = this.getAttribute('data-image');
+                document.getElementById('modal-image').src = imageSrc;
+                document.getElementById('modal').style.display = 'block';
+            });
+        });
+
+        
+        document.querySelector('.close').addEventListener('click', function() {
+            document.getElementById('modal').style.display = 'none';
+        });
+
+        
+        window.addEventListener('click', function(event) {
+            if (event.target == document.getElementById('modal')) {
+                document.getElementById('modal').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
